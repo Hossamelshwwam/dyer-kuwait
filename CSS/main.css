@@ -1,0 +1,130 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Start Tailwind Classes */
+
+@layer components {
+  .question {
+    @apply text-[--main-color] sm:text-2xl text-lg font-semibold mb-4;
+  }
+  .textAnwser {
+    @apply sm:text-2xl text-lg font-semibold mb-4;
+  }
+  .sliderText {
+    @apply absolute top-1/2 -translate-y-1/2 right-2 z-10 w-10/12 lg:text-6xl md:text-5xl sm:text-4xl text-2xl lg:leading-[100px] md:leading-[80px] sm:leading-[60px] leading-[40px];
+  }
+  .headerSction {
+    @apply sm:text-5xl text-3xl font-semibold py-5 px-10 capitalize mb-20 border-b-[5px] border-[--main-color] w-fit mx-auto;
+  }
+}
+
+/* End Tailwind Classes */
+
+/* Start Global variblies */
+:root {
+  --main-color: #2469de;
+  --link-color: #24c5de;
+}
+
+/* End Global variblies */
+
+/* Start Global Rules */
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(232 245 233);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  height: 100px;
+  padding: 0 20px;
+}
+
+.slider {
+  transition: transform 1s ease;
+}
+
+.slide {
+  position: relative;
+  height: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .slide {
+    height: calc(100vh - 70px);
+  }
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* 
+.slide:nth-of-type(1)::before {
+  content: "هل تبحث عن صباغ شاطر ورخيص بالكويت الأن";
+}
+
+.slide:nth-of-type(2)::before {
+  content: "نوفر لك نخبة الصباغين من المميزين بالكويت";
+}
+
+.slide:nth-of-type(3)::before {
+  content: "أسعار تناسب جميع الأعمال المقدمة لديك";
+} */
+
+.slider1 {
+  background-image: url("../images/slider1.jpg");
+}
+
+.slider2 {
+  background-image: url("../images/slider2.jpg");
+}
+
+.slider3 {
+  background-image: url("../images/slider3.jpg");
+}
