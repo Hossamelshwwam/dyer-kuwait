@@ -12,7 +12,7 @@
     @apply sm:text-2xl text-lg font-semibold mb-4;
   }
   .sliderText {
-    @apply absolute top-1/2 -translate-y-1/2 right-2 z-10 w-10/12 lg:text-6xl md:text-5xl sm:text-4xl text-2xl lg:leading-[100px] md:leading-[80px] sm:leading-[60px] leading-[40px];
+    @apply select-none absolute top-1/2 -translate-y-1/2 right-2 z-10 w-10/12 lg:text-6xl md:text-5xl sm:text-4xl text-2xl lg:leading-[100px] md:leading-[80px] sm:leading-[60px] leading-[40px];
   }
   .headerSction {
     @apply sm:text-5xl text-3xl font-semibold py-5 px-10 capitalize mb-20 border-b-[5px] border-[--main-color] w-fit mx-auto;
@@ -86,11 +86,12 @@ a {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
   .slide {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 50px);
   }
 }
 
@@ -103,19 +104,6 @@ a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
-
-/* 
-.slide:nth-of-type(1)::before {
-  content: "هل تبحث عن صباغ شاطر ورخيص بالكويت الأن";
-}
-
-.slide:nth-of-type(2)::before {
-  content: "نوفر لك نخبة الصباغين من المميزين بالكويت";
-}
-
-.slide:nth-of-type(3)::before {
-  content: "أسعار تناسب جميع الأعمال المقدمة لديك";
-} */
 
 .slider1 {
   background-image: url("../images/slider1.jpg");
