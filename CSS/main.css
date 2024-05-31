@@ -17,6 +17,22 @@
   .headerSction {
     @apply sm:text-5xl text-3xl font-semibold py-5 px-10 capitalize mb-20 border-b-[5px] border-[--main-color] w-fit mx-auto;
   }
+  .hoverScaleZoomIn {
+    @apply hover:scale-110 duration-300 cursor-pointer;
+  }
+  .hoverScaleZoomInWithShadow {
+    @apply hover:scale-105 hover:shadow-lg duration-300 cursor-pointer;
+  }
+  .hoverScaleZoomOut {
+    @apply hover:scale-95 duration-300 cursor-pointer;
+  }
+}
+
+.hoverScale {
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 /* End Tailwind Classes */
