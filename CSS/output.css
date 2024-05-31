@@ -600,6 +600,25 @@ video {
   }
 }
 
+.slideLayer {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: auto;
+}
+
+@media (min-width: 576px) {
+  .slideLayer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .slideLayer {
+    height: auto;
+  }
+}
+
 .question {
   margin-bottom: 1rem;
   font-size: 1.125rem;
@@ -748,6 +767,10 @@ video {
 
 .right-3 {
   right: 0.75rem;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .mx-auto {
@@ -1091,10 +1114,7 @@ a {
 
 .slide {
   position: relative;
-  height: 500px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 300px;
   cursor: pointer;
 }
 
@@ -1112,22 +1132,7 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-}
-
-.slider1 {
-  background-image: url("../images/slider1.jpg");
-}
-
-.slider2 {
-  background-image: url("../images/slider2.jpg");
-}
-
-.slider3 {
-  background-image: url("../images/slider3.jpg");
-}
-
-.slider4 {
-  background-image: url("../images/slider4.jpg");
+  z-index: 9;
 }
 
 .hover\:bg-blue-600:hover {
